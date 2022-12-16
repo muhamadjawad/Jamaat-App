@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:width(3),
         paddingVertical:height(2),
         marginTop:height(3),
-        elevation:2,
+        elevation:1.5,
         margin:0.1
     },
     left: { flex: 0.5 },

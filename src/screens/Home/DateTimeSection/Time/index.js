@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native';
 import colors from '../../../../theme/colors';
 import fontFamily from '../../../../theme/fontFamily';
-import fontSizes from '../../../../theme/fontSize';
+import fontSize from '../../../../theme/fontSize';
 
 const Time = () => {
     return (<View>
@@ -12,7 +12,7 @@ const Time = () => {
 
 const styles = StyleSheet.create({
     time: {
-        fontSize: fontSizes.EXTRA,
+        fontSize: fontSize.EXTRA,
         fontFamily: fontFamily.BOLD,
         color: colors.SECONDARY
     }

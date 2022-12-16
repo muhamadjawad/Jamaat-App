@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         borderRadius: width(2)
     },
     city: {
-        fontSize: fontSize.MEDIUM,
+        fontSize: fontSize.SMALL,
         fontFamily: fontFamily.MEDIUM,
         color: colors.PRIMARY
     }
