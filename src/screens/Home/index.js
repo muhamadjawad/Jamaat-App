@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native';
+import { height } from '../../styles/dimensions';
 import colors from '../../theme/colors'
 import { GLOBAL_SCREEN_PADDING } from '../../utils/logicalConstants';
 import DateTimeSection from './DateTimeSection';
@@ -20,7 +21,8 @@ const styles = StyleSheet.create({
     main: {
         flex: 1,
         backgroundColor: colors.WHITE,
-        paddingHorizontal: GLOBAL_SCREEN_PADDING
+        paddingHorizontal: GLOBAL_SCREEN_PADDING,
+        // marginBottom: height(4)
     }
 })
 export default Home;

@@ -9,8 +9,10 @@ const RenderTab = ({ title = '', focused, Icon }) => {
     return (<View style={[styles.main]}>
         <View style={{ height: '65%', justifyContent: 'center' }}  >
             {focused ?
-                <View style={{ top: -3 }}  >
-                    <View style={[styles.circle]}  >
+                <View style={[{ top: "-50%" }, styles.outerCircle]}  >
+                    <View
+                        style={[styles.circle]}
+                    >
                         <Icon />
                     </View>
                 </View>
@@ -37,13 +39,23 @@ const styles = StyleSheet.create({
         fontFamily: fontFamily.REGULAR,
         fontSize: fontSize.MINI
     },
-    circle: {
-        width: width(13),
-        height: width(13),
-        backgroundColor: colors.GREEN_SHADE_B,
+
+    // 
+    outerCircle: {
+        width: width(15),
+        height: width(15),
+        backgroundColor: colors.WHITE,
         borderRadius: 50,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+    },
+    circle: {
+        width: '80%',
+        height: '80%',
+        backgroundColor: colors.PRIMARY,
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 })
 export default RenderTab;

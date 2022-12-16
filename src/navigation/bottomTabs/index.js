@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
         width: '100%',
         alignSelf: 'center',
         elevation:0,
+        marginTop:height(4)
         // paddingBottom:height(2)
     },
 })
