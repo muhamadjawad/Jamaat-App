@@ -4,11 +4,13 @@ import colors from '../../theme/colors'
 import { GLOBAL_SCREEN_PADDING } from '../../utils/logicalConstants';
 import DateTimeSection from './DateTimeSection';
 import HomeHeader from './HomeHeader';
+import NamazTimings from './NamazTimings';
 
 const Home = () => {
     return (<View style={[styles.main]}>
         <HomeHeader />
         <DateTimeSection />
+        <NamazTimings />
     </View>);
 }
 
