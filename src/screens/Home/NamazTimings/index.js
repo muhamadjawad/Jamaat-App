@@ -16,7 +16,7 @@ const NamazTimings = () => {
             <Text style={[styles.namazHeading]} >{NAMAZ_KE_AUQAAT}</Text>
         </View>
         <View  style={{marginTop:height(1)}} >
-            {namazArray.map((item, index) => <RenderTiming title={item} active={index===5} />)}
+            {namazArray.map((item, index) => <RenderTiming  key={index} title={item} active={index===5} />)}
         </View>
     </View>);
 }
