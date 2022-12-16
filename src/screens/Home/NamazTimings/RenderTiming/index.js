@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         marginTop: height(2),
     },
     active: {
-        backgroundColor: colors.GREEN_SHADE_B,
+        backgroundColor: colors.PRIMARY,
         borderWidth: 0,
         paddingVertical: height(2),
         marginHorizontal:width(1),
