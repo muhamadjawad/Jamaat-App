@@ -1,6 +1,6 @@
 const GREEN_SHADE_A = '#71C9CE';//primary
 const GREEN_SHADE_D = '#E3FDFD' // tertiary
-const BLACK = '#000';
+const BLACK = '#000';//secondary
 
 const colors = {
   PRIMARY: GREEN_SHADE_A, 
