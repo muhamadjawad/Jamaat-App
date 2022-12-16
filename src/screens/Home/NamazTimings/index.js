@@ -9,13 +9,14 @@ import RenderTiming from './RenderTiming';
 
 const NamazTimings = () => {
 
-    let namazArray = ['Fajar', 'SunRise', 'Zuhar', 'Asar', 'Maghrib', 'Isha']
+    let namazArray = ['Fajar', 'SunRise', 'Zuhar', 'Asar', 'Maghrib', 'Isha'];
+
     return (<View style={[styles.main]}>
         <View>
             <Text style={[styles.namazHeading]} >{NAMAZ_KE_AUQAAT}</Text>
         </View>
         <View  style={{marginTop:height(1)}} >
-            {namazArray.map((item, index) => <RenderTiming title={item} active={index===0} />)}
+            {namazArray.map((item, index) => <RenderTiming title={item} active={index===5} />)}
         </View>
     </View>);
 }

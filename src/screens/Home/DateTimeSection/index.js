@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
         borderRadius:  GLOBAL_BORDER_RADIUS,
         paddingHorizontal:width(3),
         paddingVertical:height(2),
+        marginHorizontal:width(1),
         marginTop:height(3),
         elevation:1.5,
         margin:0.1

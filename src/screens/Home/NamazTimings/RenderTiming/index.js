@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.GREEN_SHADE_B,
         borderWidth: 0,
         paddingVertical: height(2),
+        marginHorizontal:width(1),
         elevation: 2,
-        margin: 1
     }
     ,
     text: {

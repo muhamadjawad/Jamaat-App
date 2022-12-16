@@ -24,13 +24,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: height(2)
+        marginTop: height(2),
+        marginHorizontal:width(1)
     },
     drawerContainer: {
-        elevation: 5,
+        elevation: 3,
         padding: width(2),
         backgroundColor: colors.WHITE,
-        borderRadius: width(2)
+        borderRadius: width(2),
     },
     city: {
         fontSize: fontSize.SMALL,
