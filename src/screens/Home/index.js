@@ -9,7 +9,7 @@ import NamazTimings from './NamazTimings';
 
 const Home = () => {
     return (<View style={[styles.main]}>
-        <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}  >
+        <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: height(5) }} showsVerticalScrollIndicator={false}  >
             <HomeHeader />
             <DateTimeSection />
             <NamazTimings />
@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.WHITE,
         paddingHorizontal: GLOBAL_SCREEN_PADDING,
-        // marginBottom: height(4)
     }
 })
 export default Home;

@@ -7,11 +7,14 @@ import Home from '../../screens/Home'
 import RenderTabBar from './RenderTab'
 import Drawer from '../../assets/svgs/Drawer';
 import Splash from '../../screens/Splash';
+import Mosque from '../../assets/svgs/Mosque';
+import HomeIcon from '../../assets/svgs/Home'
+import EventIcon from '../../assets/svgs/Event';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
-    return (<View style={{ backgroundColor: colors.WHITE, flex: 1 }}>
+    return (<View style={{ backgroundColor: colors.WHITE, flex: 1, }}>
         <Tab.Navigator
             initialRouteName="Home"
             screenOptions={{
@@ -21,58 +24,58 @@ const BottomTabs = () => {
                 tabBarStyle: styles.tabBar,
             }}>
             <Tab.Screen
-                name="Home"
+                name="Event"
                 component={Home}
                 options={{
-                    title: 'Home',
-                    tabBarIcon: ({ size, focused, color }) => {
-                        return (
-                            <RenderTabBar
-                                focused={focused}
-                                title={'Home'}
-                                Icon={() => {
-                                    return (
-                                        < Drawer fillColor={colors.PRIMARY} borderColor={colors.SECONDARY} size={width(5)} />
-                                    )
-                                }}
-                            />
-                        );
-                    },
-                }}
-            />
-            <Tab.Screen
-                name="Task"
-                component={Home}
-                options={{
-                    title: 'Task',
-                    tabBarIcon: ({ size, focused, color }) => {
-                        return (
-                            <RenderTabBar
-                                focused={focused}
-                                title={'Masjid'}
-                                Icon={() => {
-                                    return (
-                                        < Drawer fillColor={colors.PRIMARY} borderColor={colors.SECONDARY} size={width(5)} />
-                                    )
-                                }}
-                            />
-                        );
-                    },
-                }}
-            />
-            <Tab.Screen
-                name="Status"
-                component={Splash}
-                options={{
-                    title: 'Status',
+                    // title: 'Home',
                     tabBarIcon: ({ size, focused, color }) => {
                         return (
                             <RenderTabBar
                                 focused={focused}
                                 title={'Events'}
-                                Icon={() => {
+                                Icon={({ color, size }) => {
                                     return (
-                                        < Drawer fillColor={colors.PRIMARY} borderColor={colors.SECONDARY} size={width(5)} />
+                                        < EventIcon fillColor={color} size={size} />
+                                    )
+                                }}
+                            />
+                        );
+                    },
+                }}
+            />
+            <Tab.Screen
+                name="Home"
+                component={Home}
+                options={{
+                    tabBarIcon: ({ size, focused, color }) => {
+                        return (
+                            <RenderTabBar
+                                focused={focused}
+                                title={'Home'}
+                                Icon={({ color, size }) => {
+                                    return (
+                                        < HomeIcon fillColor={color} size={size} />
+
+                                    )
+                                }}
+                            />
+                        );
+                    },
+                }}
+            />
+            <Tab.Screen
+                name="Masjids"
+                component={Splash}
+                options={{
+                    tabBarIcon: ({ size, focused, color }) => {
+                        return (
+                            <RenderTabBar
+                                focused={focused}
+                                title={'Masjids'}
+                                Icon={({ color, size }) => {
+                                    return (
+                                        < Mosque fillColor={color} size={size} />
+
                                     )
                                 }}
                             />
@@ -89,8 +92,11 @@ const styles = StyleSheet.create({
         backgroundColor: colors.WHITE, // 'transparent',
         width: '100%',
         alignSelf: 'center',
-        elevation:0,
-        marginTop:height(4)
+        elevation: 0,
+        // marginTop: height(4),
+        borderTopWidth: 0,
+        
+
         // paddingBottom:height(2)
     },
 })

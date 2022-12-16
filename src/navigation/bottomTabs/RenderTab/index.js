@@ -9,20 +9,18 @@ const RenderTab = ({ title = '', focused, Icon }) => {
     return (<View style={[styles.main]}>
         <View style={{ height: '65%', justifyContent: 'center' }}  >
             {focused ?
-                <View style={[{ top: "-50%" }, styles.outerCircle]}  >
-                    <View
-                        style={[styles.circle]}
-                    >
-                        <Icon />
-                    </View>
+                <View style={[{
+                    top: "-20%"
+                }, styles.outerCircle]}  >
+                    <Icon size={width(8)} color={colors.PRIMARY} />
                 </View>
 
                 :
-                <Icon />
+                <Icon color={colors.GRAY} size={width(6)} />
             }
         </View>
         <View style={{ height: '35%' }}>
-            <Text style={[styles.title]} >{title}</Text>
+            <Text style={[styles.title, focused ? styles.focusedTitle : ""]} >{title}</Text>
         </View>
     </View>);
 }
@@ -39,23 +37,27 @@ const styles = StyleSheet.create({
         fontFamily: fontFamily.REGULAR,
         fontSize: fontSize.MINI
     },
-
+    focusedTitle: {
+        color: colors.PRIMARY,
+        fontFamily: fontFamily.SEMI_BOLD,
+        fontSize: fontSize.MINI
+    },
     // 
     outerCircle: {
-        width: width(15),
-        height: width(15),
+        width: width(14),
+        height: width(14),
         backgroundColor: colors.WHITE,
         borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',
     },
-    circle: {
-        width: '80%',
-        height: '80%',
-        backgroundColor: colors.PRIMARY,
-        borderRadius: 50,
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
+    // circle: {
+    //     width: '100%',
+    //     height: '100%',
+    //     backgroundColor: colors.WHITE,
+    //     borderRadius: 50,
+    //     alignItems: 'center',
+    //     justifyContent: 'center',
+    // }
 })
 export default RenderTab;
