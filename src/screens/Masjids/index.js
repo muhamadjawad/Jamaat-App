@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar';
 import colors from '../../theme/colors';
 import {GLOBAL_SCREEN_PADDING} from '../../utils/logicalConstants';
 import MasjidListing from './MasjidListing';
+import TabBar from './TabBar';
 
 const Masjids = () => {
   const [searchResult, setSearchResult] = useState('');
@@ -14,6 +15,7 @@ const Masjids = () => {
         value={searchResult}
         onChangeText={val => setSearchResult(val)}
       />
+      <TabBar />
       <MasjidListing />
     </View>
   );

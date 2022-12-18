@@ -6,11 +6,15 @@ import RenderMasjid from './RenderMasjid';
 
 const MasjidListing = () => {
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, marginTop: height(2)}}>
       <ScrollView
         style={{flex: 1}}
-        contentContainerStyle={{flexGrow: 1, paddingBottom: height(1)}}>
-        {[1, 2, 3, 4, 5].map((item, index) => (
+        contentContainerStyle={{flexGrow: 1, paddingBottom: height(1)}}
+        showsVerticalScrollIndicator={false}>
+        {[
+          1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3,
+          4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+        ].map((item, index) => (
           <RenderMasjid key={index} />
         ))}
       </ScrollView>
