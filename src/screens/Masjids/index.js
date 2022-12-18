@@ -1,15 +1,20 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import SearchBar from '../../components/SearchBar';
 import colors from '../../theme/colors';
 import {GLOBAL_SCREEN_PADDING} from '../../utils/logicalConstants';
 import MasjidListing from './MasjidListing';
 
 const Masjids = () => {
+  const [searchResult, setSearchResult] = useState('');
   return (
     <View style={[styles.main]}>
-      <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
-        <MasjidListing />
-      </ScrollView>
+      <SearchBar
+        placeholder="Masjid Btaen"
+        value={searchResult}
+        onChangeText={val => setSearchResult(val)}
+      />
+      <MasjidListing />
     </View>
   );
 };

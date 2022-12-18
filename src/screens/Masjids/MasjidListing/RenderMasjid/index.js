@@ -31,7 +31,7 @@ const RenderMasjid = () => {
         </View>
         <View style={[styles.starContainer]}>
           <TouchableOpacity>
-            <Star fillColor={colors.YELLOW_SHADE_A} size={width(6.5)} />
+            <Star fillColor={colors.YELLOW_SHADE_A} size={width(6.8)} />
           </TouchableOpacity>
         </View>
       </View>
@@ -77,6 +77,8 @@ const styles = StyleSheet.create({
   starContainer: {
     flex: 0.1,
     alignItems: 'flex-end',
+    justifyContent: 'center',
+    alignSelf: 'flex-start',
   },
 });
 
