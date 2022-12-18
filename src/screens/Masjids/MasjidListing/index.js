@@ -5,7 +5,9 @@ import RenderMasjid from './RenderMasjid';
 const MasjidListing = () => {
   return (
     <View>
-      <RenderMasjid />
+      {[1, 2, 3, 4, 5].map((item, index) => (
+        <RenderMasjid key={index} />
+      ))}
     </View>
   );
 };
