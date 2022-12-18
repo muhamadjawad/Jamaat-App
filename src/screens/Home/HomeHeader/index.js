@@ -10,8 +10,10 @@ const HomeHeader = () => {
     return (<View style={[styles.main]} >
         <TouchableOpacity
             activeOpacity={0.7}
-            style={[styles.drawerContainer]} >
-            < Drawer fillColor={colors.PRIMARY} borderColor={colors.SECONDARY} size={width(7)} />
+            // style={[styles.drawerContainer]} 
+            
+            >
+            < Drawer fillColor={colors.PRIMARY}  size={width(8)} />
         </TouchableOpacity>
         <View>
             <Text style={[styles.city]} >Karachi</Text>
@@ -30,7 +32,7 @@ const styles = StyleSheet.create({
     drawerContainer: {
         elevation: 3,
         padding: width(2),
-        backgroundColor: colors.WHITE,
+        backgroundColor: colors.GRAY,
         borderRadius: width(2),
     },
     city: {
