@@ -17,7 +17,7 @@ const BottomTabs = () => {
   return (
     <View style={{backgroundColor: colors.WHITE, flex: 1}}>
       <Tab.Navigator
-        initialRouteName="Masjids"
+        initialRouteName="Events"
         screenOptions={{
           tabBarShowLabel: false,
           headerShown: false,
@@ -25,7 +25,7 @@ const BottomTabs = () => {
           tabBarStyle: styles.tabBar,
         }}>
         <Tab.Screen
-          name="Event"
+          name="Events"
           component={Events}
           options={{
             // title: 'Home',
