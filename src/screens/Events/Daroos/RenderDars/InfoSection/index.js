@@ -15,10 +15,10 @@ const InfoSection = () => {
         <Text style={[styles.dateMonth]}>{`12`}</Text>
         <Text style={[styles.year]}>{'March,2022'}</Text>
       </View>
-      <View style={{flex: 0.75}}>
+      <View style={{flex: 0.75, marginLeft: width(2)}}>
         <View style={[styles.row]}>
           <View style={[styles.nameContainer]}>
-            <Text style={[styles.masjidName]}>{'Masjid Name'}</Text>
+            <Text style={[styles.masjidName]}>{'Rashidi Masjid'}</Text>
           </View>
           <View style={[styles.timeContainer]}>
             {/* icon and namaz */}
@@ -28,9 +28,7 @@ const InfoSection = () => {
         </View>
         <View style={[styles.titleContainer]}>
           <Text
-            style={[
-              styles.title,
-            ]}>{`Title : adwrw adwrw adwrw adwrw adwrw adwrw`}</Text>
+            style={[styles.title]}>{`Title : Deen per amal kese mumkin`}</Text>
         </View>
       </View>
     </View>

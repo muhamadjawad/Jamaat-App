@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import EventIcon from '../../../../assets/svgs/Event';
+import {height} from '../../../../styles/dimensions';
 import colors from '../../../../theme/colors';
 import InfoSection from './InfoSection';
 import Muqarir from './Muqarir';
 
 const RenderDars = () => {
   return (
-    <View>
+    <View style={[styles.main]}>
       <InfoSection />
       {/* muqarir */}
       <Muqarir />
@@ -16,10 +17,10 @@ const RenderDars = () => {
 };
 
 const styles = StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  main: {
+    borderBottomWidth: 0.5,
+    borderBottomColor: colors.GRAY,
+    paddingBottom: height(1),
   },
 });
 

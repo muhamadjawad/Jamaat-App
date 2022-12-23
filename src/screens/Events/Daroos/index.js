@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import RenderDars from './RenderDars';
 
 const Daroos = () => {
   return (
     <View style={[styles.main]}>
-      <RenderDars />
+      <ScrollView>
+        {[1, 2, 3, 4, 4, 5, 6].map((item, index) => (
+          <RenderDars key={index} />
+        ))}
+      </ScrollView>
     </View>
   );
 };
