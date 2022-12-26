@@ -7,7 +7,7 @@ import fontSize from '../../../../../theme/fontSize';
 import fontFamily from '../../../../../theme/fontFamily';
 import ClockIcon from '../../../../../assets/svgs/Clock';
 
-const InfoSection = () => {
+const InfoSection = ({item}) => {
   return (
     <View style={[styles.row, {marginTop: height(1.5)}]}>
       <View style={[styles.dateContainer]}>
@@ -18,12 +18,12 @@ const InfoSection = () => {
       <View style={{flex: 0.75, marginLeft: width(2)}}>
         <View style={[styles.row]}>
           <View style={[styles.nameContainer]}>
-            <Text style={[styles.masjidName]}>{'Rashidi Masjid'}</Text>
+            <Text style={[styles.masjidName]}>{item.masjidName}</Text>
           </View>
           <View style={[styles.timeContainer]}>
             {/* icon and namaz */}
             <ClockIcon fillColor={colors.GRAY} size={width(4)} />
-            <Text style={[styles.time]}>{'Asar'}</Text>
+            <Text style={[styles.time]}>{item.time}</Text>
           </View>
         </View>
         <View style={[styles.titleContainer]}>

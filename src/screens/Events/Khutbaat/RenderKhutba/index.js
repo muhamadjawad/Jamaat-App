@@ -7,21 +7,19 @@ import fontFamily from '../../../../theme/fontFamily';
 import ClockIcon from '../../../../assets/svgs/Clock';
 import MapPointerIcon from '../../../../assets/svgs/MapPointer';
 
-const RenderKhutba = () => {
+const RenderKhutba = ({item}) => {
   return (
     <View style={[styles.main]}>
       <View style={[styles.row]}>
         <View style={[styles.dateContainer]}>
           {/* date */}
-          <Text style={[styles.dateMonth]}>{`12`}</Text>
+          <Text style={[styles.dateMonth]}>{item.date}</Text>
           <Text style={[styles.year]}> {'March,2022'}</Text>
         </View>
         <View style={{flex: 0.75, marginLeft: width(2)}}>
           <View style={[styles.row]}>
             <View style={[styles.nameContainer]}>
-              <Text style={[styles.masjidName]}>
-                {'Sheikh Ibrahim Junagarhi'}
-              </Text>
+              <Text style={[styles.masjidName]}>{item.khateeb}</Text>
             </View>
             <View style={[styles.timeContainer]}>
               {/* icon and namaz */}
@@ -31,7 +29,7 @@ const RenderKhutba = () => {
           </View>
           <View style={[styles.locationContainer]}>
             <MapPointerIcon size={width(4)} fillColor={colors.SECONDARY} />
-            <Text style={[styles.masjid]}>{`Abu Hurairah Masjid`}</Text>
+            <Text style={[styles.masjid]}>{item.name}</Text>
           </View>
         </View>
       </View>

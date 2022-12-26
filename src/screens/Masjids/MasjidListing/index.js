@@ -13,7 +13,7 @@ const MasjidListing = () => {
         showsVerticalScrollIndicator={false}>
         {[
           1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3,
-          4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+          4, 5, 1,
         ].map((item, index) => (
           <RenderMasjid key={index} />
         ))}

@@ -6,10 +6,10 @@ import colors from '../../../../theme/colors';
 import InfoSection from './InfoSection';
 import Muqarir from './Muqarir';
 
-const RenderDars = () => {
+const RenderDars = ({item}) => {
   return (
     <View style={[styles.main]}>
-      <InfoSection />
+      <InfoSection item={item} />
       {/* muqarir */}
       <Muqarir />
     </View>
