@@ -1,3 +1,3 @@
 export default {
-  testMAsjid: require('./test_masjid_image.png'),
+  testMAsjid: require('./test_masjid_image.jpg'),
 };

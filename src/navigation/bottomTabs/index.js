@@ -5,12 +5,11 @@ import {width, height} from '../../styles/dimensions';
 import colors from '../../theme/colors';
 import Home from '../../screens/Home';
 import RenderTabBar from './RenderTab';
-import Drawer from '../../assets/svgs/Drawer';
-import Splash from '../../screens/Splash';
 import Mosque from '../../assets/svgs/Mosque';
 import HomeIcon from '../../assets/svgs/Home';
 import EventIcon from '../../assets/svgs/Event';
 import Masjids from '../../screens/Masjids';
+import Events from '../../screens/Events';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,7 +17,7 @@ const BottomTabs = () => {
   return (
     <View style={{backgroundColor: colors.WHITE, flex: 1}}>
       <Tab.Navigator
-        initialRouteName="Masjids"
+        initialRouteName="Events"
         screenOptions={{
           tabBarShowLabel: false,
           headerShown: false,
@@ -26,8 +25,8 @@ const BottomTabs = () => {
           tabBarStyle: styles.tabBar,
         }}>
         <Tab.Screen
-          name="Event"
-          component={Home}
+          name="Events"
+          component={Events}
           options={{
             // title: 'Home',
             tabBarIcon: ({size, focused, color}) => {
